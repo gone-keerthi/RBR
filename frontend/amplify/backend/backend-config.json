@@ -1,0 +1,153 @@
+{
+  "auth": {
+    "RBRWebsite": {
+      "customAuth": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "RBRWebsiteCreateAuthChallenge",
+          "triggerProvider": "Cognito"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "RBRWebsiteDefineAuthChallenge",
+          "triggerProvider": "Cognito"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "RBRWebsitePreSignup",
+          "triggerProvider": "Cognito"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "RBRWebsiteVerifyAuthChallengeResponse",
+          "triggerProvider": "Cognito"
+        }
+      ],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "PHONE_NUMBER"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "verificationMechanisms": [
+          "PHONE_NUMBER"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "function": {
+    "RBRWebsiteCreateAuthChallenge": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "RBRWebsiteDefineAuthChallenge": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "RBRWebsitePreSignup": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "RBRWebsiteVerifyAuthChallengeResponse": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_RBRWebsiteCreateAuthChallenge_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "RBRWebsiteCreateAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_RBRWebsiteCreateAuthChallenge_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "RBRWebsiteCreateAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_RBRWebsiteDefineAuthChallenge_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "RBRWebsiteDefineAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_RBRWebsiteDefineAuthChallenge_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "RBRWebsiteDefineAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_RBRWebsitePreSignup_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "RBRWebsitePreSignup"
+        }
+      ]
+    },
+    "AMPLIFY_function_RBRWebsitePreSignup_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "RBRWebsitePreSignup"
+        }
+      ]
+    },
+    "AMPLIFY_function_RBRWebsiteVerifyAuthChallengeResponse_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "RBRWebsiteVerifyAuthChallengeResponse"
+        }
+      ]
+    },
+    "AMPLIFY_function_RBRWebsiteVerifyAuthChallengeResponse_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "RBRWebsiteVerifyAuthChallengeResponse"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,89 @@
+/* .login-popup-container{
+    height: 100vh;
+} */
+.login-popup {
+  margin: auto;
+  /* margin-top: 50%; */
+  /* transform: translate(-50%,-50%); */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login-title {
+  font-family: "Baskerville Old Face";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  /* line-height: 8px; */
+  margin-bottom: 8px;
+  letter-spacing: 0.01em;
+
+  color: #293750;
+}
+.login-paragraph {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 42px;
+  /* line-height: 25px; */
+  /* identical to box height */
+
+  letter-spacing: 0.03em;
+
+  color: #293750;
+}
+.login-button {
+  background: #0263c7;
+  box-shadow: 4px 4px 15px rgba(78, 78, 78, 0.25);
+  border-radius: 9px;
+  padding: 8px 16px;
+  gap: 10px;
+  width: 114px;
+  height: 38px;
+  border: none;
+  color: white;
+  text-align: center;
+}
+.login-button:hover{
+  background-color: #0359ae;
+}
+.login-button:active{
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.login-phone-input {
+  display: flex;
+  justify-content: space-between;
+}
+.otp-fields {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 30px;
+}
+.otp-fields input {
+  /* justify-content: center;
+    align-items: center; */
+  width: 50%;
+  border: none;
+  border-bottom: 1px solid grey;
+}
+.otp-fields input:focus {
+  outline: none;
+}
+
+/* ------------updated by kerrthi-------------- */
+.otp-fields{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
